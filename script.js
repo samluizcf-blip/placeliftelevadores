@@ -9,7 +9,7 @@ const botaoProximo = document.querySelector('.carrossel-predios__controle--proxi
 const cartoesPredio = document.querySelectorAll('.cartao-predio');
 const elementosAnimados = document.querySelectorAll('.efeito-subida');
 
-const telefoneWhatsApp = '5511999999999';
+const telefoneWhatsApp = '5511986991107';
 let indiceAtualCarrossel = 0;
 
 if (botaoMenuMobile && menuNavegacao) {
