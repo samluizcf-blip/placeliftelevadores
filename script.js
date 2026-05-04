@@ -1,107 +1,106 @@
-const botaoMenuMobile = document.querySelector('.botao-menu-mobile');
-const menuNavegacao = document.querySelector('.menu-navegacao');
-const linksMenu = document.querySelectorAll('.menu-navegacao a');
-const formularioAgendamento = document.querySelector('.formulario-agendamento');
-const mensagemFormulario = document.querySelector('.mensagem-formulario');
-const trilhoCarrossel = document.querySelector('.carrossel-predios__trilho');
-const botaoAnterior = document.querySelector('.carrossel-predios__controle--anterior');
-const botaoProximo = document.querySelector('.carrossel-predios__controle--proximo');
-const cartoesPredio = document.querySelectorAll('.cartao-predio');
-const elementosAnimados = document.querySelectorAll('.efeito-subida');
+const mobileMenuButton = document.querySelector('.mobile-menu-button');
+const mainNavigation = document.querySelector('.main-navigation');
+const navigationLinks = document.querySelectorAll('.main-navigation a');
+const contactForm = document.querySelector('.contact-form');
+const contactFeedback = document.querySelector('.contact-form__feedback');
+const carouselTrack = document.querySelector('.portfolio-carousel__track');
+const carouselCards = document.querySelectorAll('.portfolio-card');
+const carouselPreviousButton = document.querySelector('.carousel-button--previous');
+const carouselNextButton = document.querySelector('.carousel-button--next');
+const animatedElements = document.querySelectorAll('.animate-on-scroll');
 
-const telefoneWhatsApp = '5511986991107';
-let indiceAtualCarrossel = 0;
+// TROCAR TELEFONE AQUI: use somente números, com DDI + DDD.
+const whatsappPhoneNumber = '5511986991107';
+let currentCarouselIndex = 0;
 
-if (botaoMenuMobile && menuNavegacao) {
-    botaoMenuMobile.addEventListener('click', () => {
-        const menuAberto = menuNavegacao.classList.toggle('aberto');
-        botaoMenuMobile.classList.toggle('ativo', menuAberto);
-        botaoMenuMobile.setAttribute('aria-expanded', String(menuAberto));
-    });
-
-    linksMenu.forEach((link) => {
-        link.addEventListener('click', () => {
-            menuNavegacao.classList.remove('aberto');
-            botaoMenuMobile.classList.remove('ativo');
-            botaoMenuMobile.setAttribute('aria-expanded', 'false');
-        });
-    });
+function closeMobileMenu() {
+    if (!mobileMenuButton || !mainNavigation) return;
+    mainNavigation.classList.remove('is-open');
+    mobileMenuButton.classList.remove('is-active');
+    mobileMenuButton.setAttribute('aria-expanded', 'false');
 }
 
-function atualizarCarrossel() {
-    if (!trilhoCarrossel || cartoesPredio.length === 0) {
-        return;
-    }
-
-    const larguraCartao = cartoesPredio[0].getBoundingClientRect().width;
-    const espacamento = window.innerWidth >= 900 ? 16 : 16;
-    const deslocamento = indiceAtualCarrossel * (larguraCartao + espacamento);
-    trilhoCarrossel.style.transform = `translateX(-${deslocamento}px)`;
-}
-
-if (botaoAnterior && botaoProximo) {
-    botaoAnterior.addEventListener('click', () => {
-        indiceAtualCarrossel = Math.max(indiceAtualCarrossel - 1, 0);
-        atualizarCarrossel();
+if (mobileMenuButton && mainNavigation) {
+    mobileMenuButton.addEventListener('click', () => {
+        const isOpen = mainNavigation.classList.toggle('is-open');
+        mobileMenuButton.classList.toggle('is-active', isOpen);
+        mobileMenuButton.setAttribute('aria-expanded', String(isOpen));
     });
 
-    botaoProximo.addEventListener('click', () => {
-        const limiteDesktop = window.innerWidth >= 900 ? Math.max(cartoesPredio.length - 2, 0) : Math.max(cartoesPredio.length - 1, 0);
-        indiceAtualCarrossel = Math.min(indiceAtualCarrossel + 1, limiteDesktop);
-        atualizarCarrossel();
+    navigationLinks.forEach((link) => link.addEventListener('click', closeMobileMenu));
+}
+
+function getCarouselLimit() {
+    const visibleCards = window.innerWidth >= 900 ? 2 : 1;
+    return Math.max(carouselCards.length - visibleCards, 0);
+}
+
+function updatePortfolioCarousel() {
+    if (!carouselTrack || carouselCards.length === 0) return;
+    const cardWidth = carouselCards[0].getBoundingClientRect().width;
+    const gapWidth = 16;
+    carouselTrack.style.transform = `translateX(-${currentCarouselIndex * (cardWidth + gapWidth)}px)`;
+}
+
+if (carouselPreviousButton && carouselNextButton) {
+    carouselPreviousButton.addEventListener('click', () => {
+        currentCarouselIndex = Math.max(currentCarouselIndex - 1, 0);
+        updatePortfolioCarousel();
+    });
+
+    carouselNextButton.addEventListener('click', () => {
+        currentCarouselIndex = Math.min(currentCarouselIndex + 1, getCarouselLimit());
+        updatePortfolioCarousel();
     });
 
     window.addEventListener('resize', () => {
-        const limiteDesktop = window.innerWidth >= 900 ? Math.max(cartoesPredio.length - 2, 0) : Math.max(cartoesPredio.length - 1, 0);
-        indiceAtualCarrossel = Math.min(indiceAtualCarrossel, limiteDesktop);
-        atualizarCarrossel();
+        currentCarouselIndex = Math.min(currentCarouselIndex, getCarouselLimit());
+        updatePortfolioCarousel();
     });
 }
 
-if (formularioAgendamento) {
-    formularioAgendamento.addEventListener('submit', (evento) => {
-        evento.preventDefault();
+if (contactForm) {
+    contactForm.addEventListener('submit', (event) => {
+        event.preventDefault();
 
-        if (!formularioAgendamento.checkValidity()) {
-            mensagemFormulario.textContent = 'Preencha todos os campos antes de continuar para o WhatsApp.';
+        if (!contactForm.checkValidity()) {
+            contactFeedback.textContent = 'Preencha todos os campos obrigatórios antes de enviar.';
             return;
         }
 
-        const dadosFormulario = new FormData(formularioAgendamento);
-        const nome = dadosFormulario.get('nome');
-        const telefone = dadosFormulario.get('telefone');
-        const regiao = dadosFormulario.get('regiao');
-        const servico = dadosFormulario.get('servico');
-        const mensagem = dadosFormulario.get('mensagem');
+        const formData = new FormData(contactForm);
+        const name = formData.get('nome');
+        const phone = formData.get('telefone');
+        const region = formData.get('regiao');
+        const service = formData.get('servico');
+        const message = formData.get('mensagem');
 
-        const textoWhatsApp = `Olá, meu nome é ${nome}.%0A` +
-            `Telefone: ${telefone}.%0A` +
-            `Região do atendimento: ${regiao}.%0A` +
-            `Serviço desejado: ${servico}.%0A` +
-            `Detalhes: ${mensagem}`;
+        const whatsappMessage = encodeURIComponent(
+            `Olá, meu nome é ${name}.\n` +
+            `Telefone: ${phone}.\n` +
+            `Região do atendimento: ${region}.\n` +
+            `Serviço desejado: ${service}.\n` +
+            `Detalhes: ${message}`
+        );
 
-        const urlWhatsApp = `https://wa.me/${telefoneWhatsApp}?text=${textoWhatsApp}`;
-
-        mensagemFormulario.textContent = 'Abrindo o WhatsApp com a mensagem preenchida...';
-        window.open(urlWhatsApp, '_blank');
+        contactFeedback.textContent = 'Abrindo o WhatsApp com a mensagem preenchida...';
+        window.open(`https://wa.me/${whatsappPhoneNumber}?text=${whatsappMessage}`, '_blank');
     });
 }
 
 if ('IntersectionObserver' in window) {
-    const observador = new IntersectionObserver((entradas) => {
-        entradas.forEach((entrada) => {
-            if (entrada.isIntersecting) {
-                entrada.target.classList.add('visivel');
-                observador.unobserve(entrada.target);
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                observer.unobserve(entry.target);
             }
         });
-    }, {
-        threshold: 0.18
-    });
+    }, { threshold: 0.16 });
 
-    elementosAnimados.forEach((elemento) => observador.observe(elemento));
+    animatedElements.forEach((element) => observer.observe(element));
 } else {
-    elementosAnimados.forEach((elemento) => elemento.classList.add('visivel'));
+    animatedElements.forEach((element) => element.classList.add('is-visible'));
 }
 
-atualizarCarrossel();
+updatePortfolioCarousel();
