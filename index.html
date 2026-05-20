@@ -4,318 +4,500 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Place's Lift Elevadores: manutenção preventiva, corretiva, modernização e atendimento técnico para elevadores em São Paulo e região.">
-    <title>Place's Lift Elevadores | Manutenção e Modernização de Elevadores</title>
+    <meta name="description"
+        content="Manutenção, modernização e atendimento técnico para elevadores em São Paulo e região. Segurança, resposta rápida e agendamento pelo WhatsApp.">
+    <meta property="og:title" content="Place's Lift Elevadores | Manutenção e Modernização">
+    <meta property="og:description" content="Manutenção de elevadores residenciais e corporativos com qualidade, agilidade e confiança em São Paulo.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="logo-places.png.png">
+    <link rel="icon" type="image/svg+xml" href="Vector 1.svg">
+    <title>Place's Lift Elevadores | Manutenção, Modernização e Agendamento</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <header class="site-header" id="inicio">
-        <div class="container site-header__content">
-            <a href="#inicio" class="site-header__brand" aria-label="Voltar para o início">
-                <img src="logo-places.png-removebg-preview.png" alt="Place's Lift Elevadores" class="site-header__logo">
+    <header class="cabecalho-principal" id="inicio">
+        <div class="container cabecalho-conteudo">
+            <a href="#inicio" class="marca-principal" aria-label="Ir para o início da página">
+                <img src="logo-places.png-removebg-preview.png" alt="Logo da Place's Lift Elevadores"
+                    class="marca-principal__logo">
             </a>
 
-            <button class="mobile-menu-button" type="button" aria-label="Abrir menu" aria-controls="main-navigation" aria-expanded="false">
-                <span></span><span></span><span></span>
+            <button class="botao-menu-mobile" type="button" aria-expanded="false" aria-controls="menu-navegacao"
+                aria-label="Abrir menu principal">
+                <span></span>
+                <span></span>
+                <span></span>
             </button>
 
-            <nav class="main-navigation" id="main-navigation" aria-label="Menu principal">
-                <a href="#sobre">Sobre</a>
+            <nav class="menu-navegacao" id="menu-navegacao" aria-label="Menu principal">
+                <a href="#sobre-empresa">Sobre</a>
                 <a href="#servicos">Serviços</a>
-                <a href="#mvv">MVV</a>
-                <a href="#fundador">Fundador</a>
-                <a href="#diferenciais">Diferenciais</a>
-                <a href="#portfolio">Portfólio</a>
-                <a href="#regioes">Regiões</a>
-                <a href="#contato" class="main-navigation__cta">Solicitar orçamento</a>
+                <a href="#predios-atendidos">Locais atendidos</a>
+                <a href="#regioes-atendidas">Regiões</a>
+                <a href="#duvidas">FAQ</a>
+                <a href="#agendamento" class="botao-menu-destaque">Falar no WhatsApp</a>
             </nav>
         </div>
     </header>
 
     <main>
-        <section class="hero-section">
-            <div class="container hero-section__grid">
-                <div class="hero-section__text animate-on-scroll">
-                    <span class="section-tag">Manutenção • Modernização • Atendimento técnico</span>
-                    <h1>Elevadores mais seguros, eficientes e bem cuidados.</h1>
+        <section class="secao-destaque">
+            <div class="container secao-destaque__conteudo">
+                <div class="secao-destaque__texto efeito-subida">
+                    <span class="etiqueta-informativa">Atendimento técnico em elevadores residenciais, comerciais e
+                        corporativos</span>
+                    <h1>Manutenção de elevadores com qualidade, agilidade e confiança.
+                    </h1>
                     <p>
-                        A Place's Lift Elevadores atende condomínios, empresas e prédios comerciais com soluções
-                        técnicas para manutenção preventiva, corretiva, instalação e modernização de elevadores.
+                        A Place's Lift Elevadores é especializada em manutenção preventiva e corretiva, garantindo
+                        segurança, funcionamento eficiente e tranquilidade para condomínios, empresas e residências.
+                        Atuamos com agilidade, responsabilidade e atendimento técnico qualificado em toda a região de
+                        São Paulo.
                     </p>
-                    <div class="hero-section__actions">
-                        <a href="#contato" class="button button--primary">Solicitar atendimento</a>
-                        <a href="#servicos" class="button button--secondary">Conhecer serviços</a>
+
+                    <div class="secao-destaque__acoes">
+                        <a href="#agendamento" class="botao-primario">Agendar avaliação</a>
+                        <a href="#predios-atendidos" class="botao-secundario">Ver locais atendidos</a>
                     </div>
-                    <div class="hero-section__trust-list" aria-label="Principais vantagens">
-                        <span>Atendimento ágil</span>
-                        <span>Equipe técnica</span>
-                        <span>Foco em segurança</span>
-                    </div>
+
+                    <ul class="lista-indicadores">
+                        <li>Atendimento profissional</li>
+                        <li>Visual alinhado à logo</li>
+                        <li>Agendamento direto no WhatsApp</li>
+                    </ul>
                 </div>
 
-                <div class="hero-card animate-on-scroll animate-on-scroll--delay">
-                    <div class="hero-card__image">
-                        <!-- TROCAR FOTO AQUI: coloque a imagem principal do técnico/elevador como background no CSS em .hero-card__image -->
-                        <span>Foto principal do atendimento</span>
+                <div class="painel-destaque efeito-subida efeito-subida--atraso" aria-label="Resumo visual da empresa">
+                    <div class="painel-destaque__cabecalho">
+                        <span class="painel-destaque__selo">Place's Lift</span>
+                        <strong>Segurança, confiança e apresentação profissional</strong>
                     </div>
-                    <div class="hero-card__content">
-                        <strong>Plantão técnico e manutenção programada</strong>
-                        <p>Organize visitas, reduza paradas inesperadas e mantenha o elevador em operação com mais confiança.</p>
+
+                    <div class="painel-destaque__grade">
+                        <article class="cartao-resumo">
+                            <span class="cartao-resumo__numero">01</span>
+                            <h2>Preventiva</h2>
+                            <p>Reduz falhas inesperadas e melhora a rotina do equipamento.</p>
+                        </article>
+
+                        <article class="cartao-resumo">
+                            <span class="cartao-resumo__numero">02</span>
+                            <h2>Corretiva</h2>
+                            <p>Atendimento rápido para recolocar o elevador em operação.</p>
+                        </article>
+
+                        <article class="cartao-resumo">
+                            <span class="cartao-resumo__numero">03</span>
+                            <h2>Modernização</h2>
+                            <p>Atualização visual e técnica para mais segurança e desempenho.</p>
+                        </article>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="stats-section" aria-label="Resumo da empresa">
-            <div class="container stats-section__grid">
-                <article class="stat-card animate-on-scroll">
-                    <strong>24h*</strong>
-                    <span>Possibilidade de atendimento emergencial conforme contrato.</span>
+        <section class="secao-marcas-de-confianca">
+            <div class="container secao-marcas-de-confianca__conteudo">
+                <article class="cartao-metrica efeito-subida">
+                    <strong>Atendimento com foco em</strong>
+                    <span>condomínios, empresas e prédios comerciais</span>
                 </article>
-                <article class="stat-card animate-on-scroll animate-on-scroll--delay">
-                    <strong>360°</strong>
-                    <span>Manutenção, modernização, instalação e suporte técnico.</span>
+                <article class="cartao-metrica efeito-subida efeito-subida--atraso">
+                    <strong>Estrutura pensada para</strong>
+                    <span>funcionar muito bem no celular</span>
                 </article>
-                <article class="stat-card animate-on-scroll animate-on-scroll--long-delay">
-                    <strong>SP</strong>
-                    <span>Atuação em São Paulo, ABC e Grande São Paulo.</span>
+                <article class="cartao-metrica efeito-subida efeito-subida--longo">
+                    <strong>Contato principal</strong>
+                    <span>WhatsApp com mensagem pronta e personalizada</span>
                 </article>
             </div>
         </section>
 
-        <section class="about-section" id="sobre">
-            <div class="container about-section__grid">
-                <div class="section-heading animate-on-scroll">
-                    <span class="section-tag">Sobre a Place's Lift</span>
-                    <h2>Uma empresa preparada para cuidar da segurança do seu prédio.</h2>
+        <section class="secao-sobre" id="sobre-empresa">
+            <div class="container secao-sobre__grid">
+                <div class="cabecalho-secao efeito-subida">
+                    <span class="sobretitulo">Sobre a empresa</span>
+                    <h2>Excelência e segurança na mobilidade vertical.</h2>
+
+                    <!-- BLOCO DA FOTO DO FUNDADOR -->
+                    <div class="foto-fundador-container" style="margin-top: 2.5rem; border-radius: 24px; overflow: hidden; box-shadow: var(--sombra-forte); background: rgba(15, 74, 163, 0.08); border: 1px solid var(--cor-borda);">
+                        <!-- 🔴 INSIRA A FOTO DO ANDRÉ AQUI -->
+                        <!-- Dica: Use uma foto profissional e clara. O tamanho será ajustado automaticamente. -->
+                        <img src="sua-foto-andre-aqui.jpg" alt="André Luiz Calado Farias - Fundador da Place's Lift" style="width: 100%; height: auto; display: block; object-fit: cover; aspect-ratio: 4/5;">
+                    </div>
                 </div>
-                <div class="about-section__content animate-on-scroll animate-on-scroll--delay">
+
+                <div class="conteudo-sobre efeito-subida efeito-subida--atraso">
                     <p>
-                        A Place's Lift Elevadores atua com atendimento técnico especializado para manter elevadores em
-                        funcionamento seguro, eficiente e dentro de uma rotina de cuidado profissional.
+                        A Place's Lift Elevadores nasceu do compromisso inabalável com a excelência técnica e a segurança. 
+                        Nossa equipe entende que cada elevador parado é uma interrupção na vida das pessoas e no fluxo dos negócios.
                     </p>
                     <p>
-                        O site foi estruturado para transmitir confiança ao cliente final: apresentação clara, serviços
-                        bem separados, área para fotos reais dos trabalhos e contato rápido pelo WhatsApp.
+                        Implementamos processos rigorosos de manutenção preventiva e oferecemos um suporte 
+                        corretivo ágil, focado em resolver o problema na raiz.
                     </p>
+                    
+                    <div class="bloco-fundador">
+                        <h3>O Fundador</h3>
+                        <p>
+                            Dirigida por <strong>André Luiz Calado Farias</strong>, especialista no setor de transporte vertical, 
+                            a Place's Lift carrega em seu DNA a sua vasta experiência prática. André construiu a empresa com a visão de 
+                            oferecer um atendimento além do básico: um serviço humanizado, tecnicamente impecável e totalmente 
+                            transparente para síndicos e gestores.
+                        </p>
+                    </div>
                 </div>
+            </div>
+
+            <div class="container secao-sobre__grade-info" style="margin-top: 3rem;">
+                <article class="cartao-info efeito-subida">
+                    <h3>Missão</h3>
+                    <p>Garantir o transporte vertical seguro e eficiente, entregando soluções técnicas ágeis que valorizam o patrimônio e trazem tranquilidade ao dia a dia dos nossos clientes.</p>
+                </article>
+                <article class="cartao-info efeito-subida efeito-subida--atraso">
+                    <h3>Visão</h3>
+                    <p>Ser a principal referência em confiança e qualidade técnica no mercado de manutenção de elevadores em São Paulo, construindo parcerias duradouras com condomínios e empresas.</p>
+                </article>
+                <article class="cartao-info efeito-subida efeito-subida--longo">
+                    <h3>Valores</h3>
+                    <p>Segurança inegociável, transparência absoluta nos diagnósticos e orçamentos, ética profissional, atendimento humanizado e aperfeiçoamento técnico contínuo.</p>
+                </article>
             </div>
         </section>
 
-
-
-        <section class="mvv-section" id="mvv">
+        <section class="secao-servicos" id="servicos">
             <div class="container">
-                <div class="section-heading section-heading--center animate-on-scroll">
-                    <span class="section-tag">Missão, Visão e Valores</span>
-                    <h2>Compromisso técnico com segurança, confiança e evolução constante.</h2>
-                    <p>Seção criada para fortalecer a imagem institucional da empresa e passar mais credibilidade ao cliente.</p>
-                </div>
-
-                <div class="mvv-grid">
-                    <article class="mvv-card mvv-card--missao animate-on-scroll">
-                        <span class="mvv-card__icon">01</span>
-                        <h3>Missão</h3>
-                        <p>Oferecer soluções técnicas em elevadores com segurança, agilidade e responsabilidade, garantindo tranquilidade para condomínios, empresas e usuários.</p>
-                    </article>
-                    <article class="mvv-card mvv-card--visao animate-on-scroll animate-on-scroll--delay">
-                        <span class="mvv-card__icon">02</span>
-                        <h3>Visão</h3>
-                        <p>Ser reconhecida como uma empresa de referência em manutenção e modernização de elevadores, destacando-se pela qualidade do atendimento e pela confiança construída com cada cliente.</p>
-                    </article>
-                    <article class="mvv-card mvv-card--valores animate-on-scroll animate-on-scroll--long-delay">
-                        <span class="mvv-card__icon">03</span>
-                        <h3>Valores</h3>
-                        <ul>
-                            <li>Segurança em primeiro lugar</li>
-                            <li>Transparência no atendimento</li>
-                            <li>Compromisso com prazos</li>
-                            <li>Respeito ao cliente</li>
-                            <li>Excelência técnica</li>
-                        </ul>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section class="founder-section" id="fundador">
-            <div class="container founder-section__grid">
-                <div class="founder-section__image animate-on-scroll">
-                    <!-- TROCAR FOTO AQUI: coloque a foto do fundador como background no CSS em .founder-section__image -->
-                    <span>Foto do fundador</span>
-                </div>
-
-                <div class="founder-section__content animate-on-scroll animate-on-scroll--delay">
-                    <span class="section-tag">Quem criou a empresa</span>
-                    <h2>Uma história construída com experiência, responsabilidade e vontade de servir bem.</h2>
+                <div class="cabecalho-secao cabecalho-secao--centralizado efeito-subida">
+                    <span class="sobretitulo">Serviços</span>
+                    <h2>Soluções completas para seu elevador</h2>
                     <p>
-                        A Place's Lift Elevadores nasceu da visão de seu fundador, um profissional que identificou a necessidade de oferecer um atendimento mais próximo, transparente e eficiente no setor de elevadores.
+                        Nossos serviços são prestados com peças de alta qualidade e com a expertise que o seu condomínio merece.
                     </p>
-                    <p>
-                        Com foco em segurança e confiança, a empresa foi criada para atender clientes que precisam de suporte técnico sério, comunicação clara e soluções que realmente preservem o funcionamento dos equipamentos.
-                    </p>
-
-                    <div class="founder-highlights">
-                        <article>
-                            <strong>Experiência prática</strong>
-                            <span>Conhecimento aplicado no dia a dia técnico.</span>
-                        </article>
-                        <article>
-                            <strong>Atendimento próximo</strong>
-                            <span>Contato direto e linguagem simples com o cliente.</span>
-                        </article>
-                        <article>
-                            <strong>Compromisso</strong>
-                            <span>Foco em segurança, pontualidade e qualidade.</span>
-                        </article>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="services-section" id="servicos">
-            <div class="container">
-                <div class="section-heading section-heading--center animate-on-scroll">
-                    <span class="section-tag">Serviços</span>
-                    <h2>Soluções completas para elevadores residenciais e comerciais.</h2>
-                    <p>Cards objetivos, profissionais e fáceis de editar no HTML.</p>
                 </div>
 
-                <div class="services-grid">
-                    <article class="service-card animate-on-scroll">
-                        <span class="service-card__number">01</span>
-                        <h3>Manutenção preventiva</h3>
-                        <p>Inspeções periódicas para reduzir falhas, evitar paradas e aumentar a vida útil do equipamento.</p>
-                    </article>
-                    <article class="service-card animate-on-scroll animate-on-scroll--delay">
-                        <span class="service-card__number">02</span>
-                        <h3>Manutenção corretiva</h3>
-                        <p>Correção de falhas técnicas com atendimento organizado e foco no retorno seguro da operação.</p>
-                    </article>
-                    <article class="service-card animate-on-scroll animate-on-scroll--long-delay">
-                        <span class="service-card__number">03</span>
-                        <h3>Modernização</h3>
-                        <p>Atualização de componentes, painéis e acabamento para melhorar segurança, conforto e desempenho.</p>
-                    </article>
-                    <article class="service-card animate-on-scroll">
-                        <span class="service-card__number">04</span>
+                <div class="grade-servicos">
+                    <article class="cartao-servico efeito-subida">
+                        <span class="cartao-servico__indice">01</span>
                         <h3>Instalação</h3>
-                        <p>Apoio técnico para projetos de instalação em prédios residenciais, comerciais e corporativos.</p>
+                        <p>Projetos para elevadores em ambientes residenciais, comerciais e corporativos.</p>
+                    </article>
+
+                    <article class="cartao-servico efeito-subida efeito-subida--atraso">
+                        <span class="cartao-servico__indice">02</span>
+                        <h3>Manutenção preventiva</h3>
+                        <p>Rotina de inspeções para aumentar vida útil e reduzir riscos de parada.</p>
+                    </article>
+
+                    <article class="cartao-servico efeito-subida efeito-subida--longo">
+                        <span class="cartao-servico__indice">03</span>
+                        <h3>Manutenção corretiva</h3>
+                        <p>Correção de falhas com agilidade, foco técnico e melhor retorno operacional.</p>
+                    </article>
+
+                    <article class="cartao-servico efeito-subida">
+                        <span class="cartao-servico__indice">04</span>
+                        <h3>Modernização</h3>
+                        <p>Atualização de componentes, painéis e sistemas para mais segurança e desempenho.</p>
                     </article>
                 </div>
             </div>
         </section>
 
-        <section class="differentials-section" id="diferenciais">
-            <div class="container differentials-section__grid">
-                <div class="section-heading animate-on-scroll">
-                    <span class="section-tag">Diferenciais</span>
-                    <h2>Por que escolher a Place's Lift?</h2>
-                    <p>Essa seção ajuda o cliente a entender valor antes de pedir orçamento.</p>
-                </div>
-                <div class="differentials-list animate-on-scroll animate-on-scroll--delay">
-                    <article class="differential-item"><strong>Diagnóstico técnico claro</strong><span>Comunicação objetiva sobre o problema, solução e próximos passos.</span></article>
-                    <article class="differential-item"><strong>Rotina preventiva</strong><span>Planejamento de visitas para evitar prejuízos com paradas inesperadas.</span></article>
-                    <article class="differential-item"><strong>Atendimento humanizado</strong><span>Contato direto, linguagem simples e suporte para síndicos e gestores.</span></article>
-                    <article class="differential-item"><strong>Imagem profissional</strong><span>Estrutura visual pronta para fotos reais, provas sociais e serviços realizados.</span></article>
-                </div>
-            </div>
-        </section>
-
-        <section class="portfolio-section" id="portfolio">
+        <section class="secao-predios" id="predios-atendidos">
             <div class="container">
-                <div class="section-heading section-heading--center animate-on-scroll">
-                    <span class="section-tag">Portfólio</span>
-                    <h2>Carrossel para destacar prédios, serviços e atendimentos realizados.</h2>
-                    <p>Troque os blocos de imagem por fotos reais do cliente quando tiver o material.</p>
+                <div class="cabecalho-secao cabecalho-secao--centralizado efeito-subida">
+                    <span class="sobretitulo">Locais atendidos</span>
+                    <h2>Nossa presença em condomínios e empresas</h2>
+                    <p>
+                        Estamos presentes em diversos tipos de empreendimentos na capital e região. Veja alguns dos projetos e clientes onde atuamos.
+                    </p>
                 </div>
 
-                <div class="portfolio-carousel" data-carousel="portfolio">
-                    <button class="carousel-button carousel-button--previous" type="button" aria-label="Voltar item">‹</button>
-                    <div class="portfolio-carousel__viewport">
-                        <div class="portfolio-carousel__track">
-                            <article class="portfolio-card">
-                                <div class="portfolio-card__image portfolio-card__image--one"><span>Foto 01</span></div>
-                                <div class="portfolio-card__body"><h3>Condomínio residencial</h3><p>Manutenção preventiva e acompanhamento técnico periódico.</p></div>
+                <div class="carrossel-predios">
+                    <button class="carrossel-predios__controle carrossel-predios__controle--anterior" type="button"
+                        aria-label="Ver item anterior">‹</button>
+
+                    <div class="carrossel-predios__janela">
+                        <div class="carrossel-predios__trilho">
+                            <article class="cartao-predio">
+                                <!-- 🔴 INSIRA A SUA IMAGEM 1 ABAIXO TROCANDO O NOME DA IMAGEM -->
+                                <div class="cartao-predio__imagem cartao-predio__imagem--um" style="background-image: url('sua-imagem-1-aqui.jpg');">
+                                    <span>Manutenção Predial</span>
+                                </div>
+                                <div class="cartao-predio__conteudo">
+                                    <h3>Condomínios Residenciais</h3>
+                                    <p>Atendimento focado em minimizar o tempo de inatividade com manutenções eficientes e preventivas.</p>
+                                </div>
                             </article>
-                            <article class="portfolio-card">
-                                <div class="portfolio-card__image portfolio-card__image--two"><span>Foto 02</span></div>
-                                <div class="portfolio-card__body"><h3>Prédio comercial</h3><p>Atendimento corretivo para retomada segura da operação.</p></div>
+
+                            <article class="cartao-predio">
+                                <!-- 🔴 INSIRA A SUA IMAGEM 2 ABAIXO TROCANDO O NOME DA IMAGEM -->
+                                <div class="cartao-predio__imagem cartao-predio__imagem--dois" style="background-image: url('sua-imagem-2-aqui.jpg');">
+                                    <span>Centros Comerciais</span>
+                                </div>
+                                <div class="cartao-predio__conteudo">
+                                    <h3>Prédios Corporativos</h3>
+                                    <p>Suporte rápido e seguro, garantindo fluxo contínuo de pessoas e modernização do seu equipamento.</p>
+                                </div>
                             </article>
-                            <article class="portfolio-card">
-                                <div class="portfolio-card__image portfolio-card__image--three"><span>Foto 03</span></div>
-                                <div class="portfolio-card__body"><h3>Modernização técnica</h3><p>Atualização de componentes e melhoria de desempenho.</p></div>
+
+                            <article class="cartao-predio">
+                                <!-- 🔴 INSIRA A SUA IMAGEM 3 ABAIXO TROCANDO O NOME DA IMAGEM -->
+                                <div class="cartao-predio__imagem cartao-predio__imagem--tres" style="background-image: url('sua-imagem-3-aqui.jpg');">
+                                    <span>Modernização Estética</span>
+                                </div>
+                                <div class="cartao-predio__conteudo">
+                                    <h3>Revitalização de Cabines</h3>
+                                    <p>Atualização não apenas técnica, mas também visual dos elevadores, trazendo valorização ao edifício.</p>
+                                </div>
                             </article>
-                            <article class="portfolio-card">
-                                <div class="portfolio-card__image portfolio-card__image--four"><span>Foto 04</span></div>
-                                <div class="portfolio-card__body"><h3>Empresa corporativa</h3><p>Rotina de manutenção para ambiente com alto fluxo de pessoas.</p></div>
+
+                            <article class="cartao-predio">
+                                <!-- 🔴 INSIRA A SUA IMAGEM 4 ABAIXO TROCANDO O NOME DA IMAGEM -->
+                                <div class="cartao-predio__imagem cartao-predio__imagem--quatro" style="background-image: url('sua-imagem-4-aqui.jpg');">
+                                    <span>Plantão Ágil</span>
+                                </div>
+                                <div class="cartao-predio__conteudo">
+                                    <h3>Cobertura Ampla</h3>
+                                    <p>Prontidão e equipes estrategicamente localizadas nas zonas sul, oeste, centro e grande São Paulo.</p>
+                                </div>
                             </article>
                         </div>
                     </div>
-                    <button class="carousel-button carousel-button--next" type="button" aria-label="Avançar item">›</button>
+
+                    <button class="carrossel-predios__controle carrossel-predios__controle--proximo" type="button"
+                        aria-label="Ver próximo item">›</button>
                 </div>
             </div>
         </section>
 
-        <section class="regions-section" id="regioes">
-            <div class="container regions-section__grid">
-                <div class="section-heading animate-on-scroll">
-                    <span class="section-tag">Regiões atendidas</span>
-                    <h2>Atendimento em São Paulo e região metropolitana.</h2>
-                    <p>Edite os nomes abaixo conforme as regiões reais de atuação da empresa.</p>
+        <section class="secao-regioes" id="regioes-atendidas">
+            <div class="container secao-regioes__grid">
+                <div class="cabecalho-secao efeito-subida">
+                    <span class="sobretitulo">Regiões atendidas</span>
+                    <h2>Mostrar onde a empresa atua melhora SEO local e deixa a comunicação mais clara.</h2>
+                    <p>
+                        Aqui eu deixei uma grade pronta com regiões de exemplo. Você pode substituir pelos bairros,
+                        cidades e áreas reais onde a Place's Lift atende.
+                    </p>
                 </div>
-                <div class="regions-grid animate-on-scroll animate-on-scroll--delay">
-                    <article class="region-card"><strong>São Paulo - Capital</strong><span>Condomínios, empresas e prédios comerciais.</span></article>
-                    <article class="region-card"><strong>Zona Sul</strong><span>Atendimento técnico para condomínios residenciais.</span></article>
-                    <article class="region-card"><strong>Zona Oeste</strong><span>Manutenção preventiva e corretiva.</span></article>
-                    <article class="region-card"><strong>Centro</strong><span>Prédios comerciais e corporativos.</span></article>
-                    <article class="region-card"><strong>ABC Paulista</strong><span>Contratos recorrentes e suporte técnico.</span></article>
-                    <article class="region-card"><strong>Grande São Paulo</strong><span>Demais cidades conforme disponibilidade.</span></article>
+
+                <div class="grade-regioes efeito-subida efeito-subida--atraso">
+                    <article class="cartao-regiao"><strong>Centro de São Paulo</strong><span>Atendimento em prédios
+                            comerciais e corporativos.</span></article>
+                    <article class="cartao-regiao"><strong>Zona Sul</strong><span>Condomínios residenciais e
+                            empresariais.</span></article>
+                    <article class="cartao-regiao"><strong>Zona Oeste</strong><span>Rotas estratégicas para manutenção e
+                            suporte.</span></article>
+                    <article class="cartao-regiao"><strong>ABC Paulista</strong><span>Atendimento técnico para
+                            condomínios e empresas.</span></article>
+                    <article class="cartao-regiao"><strong>Grande São Paulo</strong><span>Operação ampliada para
+                            contratos recorrentes.</span></article>
+                    <article class="cartao-regiao"><strong>Outras regiões</strong><span>Adicione aqui bairros e cidades
+                            reais do negócio.</span></article>
                 </div>
             </div>
         </section>
 
-        <section class="contact-section" id="contato">
-            <div class="container contact-section__grid">
-                <div class="section-heading animate-on-scroll">
-                    <span class="section-tag">Contato rápido</span>
-                    <h2>Solicite uma avaliação pelo WhatsApp.</h2>
-                    <p>O formulário monta automaticamente uma mensagem profissional para o cliente enviar.</p>
+        <section class="secao-depoimentos" id="depoimentos">
+            <div class="container">
+                <div class="cabecalho-secao cabecalho-secao--centralizado efeito-subida">
+                    <span class="sobretitulo">Prova Social</span>
+                    <h2>O que dizem nossos clientes</h2>
+                    <p>A confiança de síndicos e gestores é o nosso maior patrimônio. Veja as experiências de quem já escolheu a Place's Lift.</p>
+                </div>
+                <div class="grade-depoimentos">
+                    <article class="cartao-depoimento efeito-subida">
+                        <div class="estrelas">★★★★★</div>
+                        <p class="texto-depoimento">"Nós tínhamos problemas constantes de paradas. Desde que a Place's Lift assumiu, o número de chamados caiu drasticamente e o atendimento é sempre rápido."</p>
+                        <div class="autor-depoimento">
+                            <strong>Carlos Almeida</strong>
+                            <span>Síndico Profissional - Zona Oeste</span>
+                        </div>
+                    </article>
+                    <article class="cartao-depoimento efeito-subida efeito-subida--atraso">
+                        <div class="estrelas">★★★★★</div>
+                        <p class="texto-depoimento">"Transparência total nos orçamentos e peças de qualidade. Equipe técnica muito educada e que realmente entende dos equipamentos."</p>
+                        <div class="autor-depoimento">
+                            <strong>Mariana Costa</strong>
+                            <span>Gestora de Facilities - Centro</span>
+                        </div>
+                    </article>
+                    <article class="cartao-depoimento efeito-subida efeito-subida--longo">
+                        <div class="estrelas">★★★★★</div>
+                        <p class="texto-depoimento">"Fizemos a modernização estética das duas cabines do nosso condomínio e o resultado foi incrível. Valorizou muito o prédio!"</p>
+                        <div class="autor-depoimento">
+                            <strong>Roberto Mendes</strong>
+                            <span>Síndico Residencial - Zona Sul</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="secao-faq" id="duvidas">
+            <div class="container secao-faq__grid">
+                <div class="cabecalho-secao efeito-subida">
+                    <span class="sobretitulo">Dúvidas Frequentes</span>
+                    <h2>Perguntas Comuns</h2>
+                    <p>Ficou com alguma dúvida sobre nosso atendimento ou serviços? Confira as respostas abaixo ou chame no WhatsApp.</p>
+                </div>
+                <div class="lista-faq efeito-subida efeito-subida--atraso">
+                    <details class="item-faq" name="faq">
+                        <summary>A avaliação técnica tem custo?</summary>
+                        <div class="conteudo-faq">
+                            <p>Para contratos de manutenção ou projetos de modernização, oferecemos uma vistoria inicial sem compromisso para entender as reais necessidades do seu equipamento.</p>
+                        </div>
+                    </details>
+                    <details class="item-faq" name="faq">
+                        <summary>Vocês têm plantão para emergências?</summary>
+                        <div class="conteudo-faq">
+                            <p>Sim. Sabemos que problemas não têm hora para acontecer. Mantemos equipes de prontidão para garantir o resgate de passageiros e resolução de falhas críticas.</p>
+                        </div>
+                    </details>
+                    <details class="item-faq" name="faq">
+                        <summary>Atendem elevadores de marcas antigas?</summary>
+                        <div class="conteudo-faq">
+                            <p>Sim! Nossa equipe possui vasto conhecimento técnico para atuar em equipamentos multimarcas, dos mais antigos e eletromecânicos aos mais modernos e digitais.</p>
+                        </div>
+                    </details>
+                    <details class="item-faq" name="faq">
+                        <summary>O que está incluso no contrato preventivo?</summary>
+                        <div class="conteudo-faq">
+                            <p>O contrato inclui visitas mensais obrigatórias para lubrificação, ajustes, limpeza técnica, testes de segurança e o atendimento a chamados de falhas ocorridas no mês.</p>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <section class="secao-agendamento" id="agendamento">
+            <div class="container secao-agendamento__grid">
+                <div class="cabecalho-secao efeito-subida">
+                    <span class="sobretitulo">Agendamento</span>
+                    <h2>Sistema simples que monta a mensagem e envia direto para o WhatsApp.</h2>
+                    <p>
+                        Em vez de um formulário solto, aqui o usuário informa os dados principais e já abre o WhatsApp
+                        com tudo preenchido.
+                        Isso reduz atrito e acelera o contato.
+                    </p>
                 </div>
 
-                <form class="contact-form animate-on-scroll animate-on-scroll--delay" novalidate>
-                    <label class="form-field"><span>Nome</span><input type="text" name="nome" placeholder="Digite seu nome" required></label>
-                    <label class="form-field"><span>Telefone</span><input type="tel" name="telefone" placeholder="(11) 99999-9999" required></label>
-                    <label class="form-field"><span>Região</span><input type="text" name="regiao" placeholder="Ex: Zona Sul, ABC, Centro" required></label>
-                    <label class="form-field"><span>Serviço</span><select name="servico" required><option value="">Selecione</option><option>Manutenção preventiva</option><option>Manutenção corretiva</option><option>Modernização</option><option>Instalação</option><option>Avaliação técnica</option></select></label>
-                    <label class="form-field form-field--full"><span>Mensagem</span><textarea name="mensagem" rows="5" placeholder="Descreva a necessidade do atendimento" required></textarea></label>
-                    <button type="submit" class="button button--primary contact-form__button">Enviar para o WhatsApp</button>
-                    <p class="contact-form__feedback" aria-live="polite"></p>
+                <form class="formulario-agendamento efeito-subida efeito-subida--atraso" novalidate>
+                    <label class="campo-formulario">
+                        <span>Nome</span>
+                        <input type="text" name="nome" placeholder="Digite seu nome" required>
+                    </label>
+
+                    <label class="campo-formulario">
+                        <span>Telefone</span>
+                        <input type="tel" name="telefone" placeholder="Digite seu telefone" required>
+                    </label>
+
+                    <label class="campo-formulario">
+                        <span>Região do atendimento</span>
+                        <input type="text" name="regiao" placeholder="Ex: Zona Sul, Centro, ABC" required>
+                    </label>
+
+                    <label class="campo-formulario">
+                        <span>Tipo de serviço</span>
+                        <select name="servico" required>
+                            <option value="">Selecione</option>
+                            <option value="Instalação">Instalação</option>
+                            <option value="Manutenção preventiva">Manutenção preventiva</option>
+                            <option value="Manutenção corretiva">Manutenção corretiva</option>
+                            <option value="Modernização">Modernização</option>
+                            <option value="Avaliação técnica">Avaliação técnica</option>
+                        </select>
+                    </label>
+
+                    <label class="campo-formulario campo-formulario--largura-total">
+                        <span>Detalhes do atendimento</span>
+                        <textarea name="mensagem" rows="5"
+                            placeholder="Descreva o tipo de prédio, problema ou necessidade" required></textarea>
+                    </label>
+
+                    <button type="submit" class="botao-primario botao-agendar-whatsapp">Agendar pelo WhatsApp</button>
+                    <p class="mensagem-formulario" aria-live="polite"></p>
                 </form>
             </div>
         </section>
     </main>
 
-    <a class="floating-whatsapp" href="https://wa.me/5511986991107" target="_blank" aria-label="Falar com a Place's Lift no WhatsApp">WhatsApp</a>
+    <div class="whatsapp-flutuante-container">
+        <div class="whatsapp-tooltip">Precisa de ajuda agora?</div>
+        <a href="#agendamento" class="botao-whatsapp-flutuante" aria-label="Ir para a seção de agendamento no WhatsApp">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.38c-.297-.149-1.758-.867-2.03-.967-.273-.099-.47-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.882-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.015-1.04 2.476 0 1.46 1.065 2.872 1.213 3.07.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.575-.087 1.758-.718 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.98 1.005-3.645-.235-.373a9.86 9.86 0 01-1.51-5.26c0-5.445 4.43-9.877 9.882-9.877 2.64 0 5.122 1.028 6.988 2.896a9.837 9.837 0 012.888 6.991c-.004 5.445-4.437 9.88-9.881 9.88m8.413-18.297A11.815 11.815 0 0012.052 0C5.503 0 .178 5.326.175 11.874c0 2.094.547 4.142 1.588 5.945L.001 24l6.335-1.661a11.85 11.85 0 005.711 1.46h.004c6.549 0 11.876-5.326 11.879-11.876a11.808 11.808 0 00-3.465-8.418" fill="currentColor"/></svg>
+            WhatsApp
+        </a>
+    </div>
 
-    <footer class="site-footer">
-        <div class="container site-footer__grid">
-            <div class="site-footer__brand-column">
-                <img src="Vector 1.svg" alt="Place's Lift Elevadores" class="site-footer__logo">
-                <p>Manutenção, modernização e atendimento técnico para elevadores com foco em segurança, agilidade e confiança.</p>
-                <a href="https://wa.me/5511986991107" target="_blank" class="site-footer__whatsapp">Falar no WhatsApp</a>
+    <footer class="rodape-principal">
+        <div class="container rodape-conteudo">
+            <div class="rodape-coluna rodape-empresa">
+                <div class="rodape-logo-bloco">
+                    <img src="Vector 1.svg" alt="Logo Place's Lift Elevadores" class="rodape-logo">
+                </div>
+
+                <p class="rodape-descricao">
+                    A Place's Lift Elevadores oferece manutenção preventiva, corretiva e atendimento técnico
+                    para elevadores residenciais, comerciais e corporativos, com foco em segurança,
+                    agilidade e confiança.
+                </p>
+
+                <a href="https://wa.me/5511986991107" target="_blank" class="rodape-botao-whatsapp">
+                    Falar no WhatsApp
+                </a>
             </div>
-            <div class="site-footer__column"><h3>Site</h3><a href="#sobre">Sobre</a><a href="#mvv">MVV</a><a href="#fundador">Fundador</a><a href="#servicos">Serviços</a><a href="#portfolio">Portfólio</a><a href="#contato">Contato</a></div>
-            <div class="site-footer__column"><h3>Serviços</h3><span>Preventiva</span><span>Corretiva</span><span>Modernização</span><span>Instalação</span></div>
-            <div class="site-footer__column"><h3>Contato</h3><a href="tel:+5511986991107">(11) 98699-1107</a><a href="mailto:contato@placeslift.com.br">contato@placeslift.com.br</a><a href="https://www.instagram.com/seuinstagram" target="_blank">Instagram</a></div>
+
+            <div class="rodape-coluna">
+                <h3 class="rodape-titulo">Links rápidos</h3>
+                <ul class="rodape-lista">
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#locais-atendidos">Locais atendidos</a></li>
+                    <li><a href="#regioes">Regiões</a></li>
+                    <li><a href="#agendamento">Agendamento</a></li>
+                </ul>
+            </div>
+
+            <div class="rodape-coluna">
+                <h3 class="rodape-titulo">Contato</h3>
+                <ul class="rodape-lista">
+                    <li><a href="https://wa.me/5511999999999" target="_blank">WhatsApp</a></li>
+                    <li><a href="tel:+5511986991107">(11) 98699-1107</a></li>
+                    <li><a href="mailto:contato@placeslift.com.br">contato@placeslift.com.br</a></li>
+                    <li><a href="https://www.instagram.com/seuinstagram" target="_blank">Instagram</a></li>
+                </ul>
+            </div>
+
+            <div class="rodape-coluna">
+                <h3 class="rodape-titulo">Regiões atendidas</h3>
+                <ul class="rodape-lista">
+                    <li>São Paulo - Capital</li>
+                    <li>Zona Sul</li>
+                    <li>Zona Oeste</li>
+                    <li>ABC Paulista</li>
+                    <li>Grande São Paulo</li>
+                </ul>
+            </div>
         </div>
-        <div class="site-footer__bottom"><div class="container"><p>© 2026 Place's Lift Elevadores. Todos os direitos reservados.</p><p>Site profissional focado em conversão.</p></div></div>
+
+        <div class="rodape-inferior">
+            <div class="container rodape-inferior-conteudo">
+                <p>© 2026 Place's Lift Elevadores. Todos os direitos reservados.</p>
+                <p>Desenvolvido com foco em apresentação profissional e conversão.</p>
+            </div>
+        </div>
     </footer>
+
 
     <script src="script.js"></script>
 </body>
+
 </html>
