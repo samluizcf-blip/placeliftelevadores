@@ -1180,7 +1180,7 @@ section {
         font-size: 13px;
     }
 }
-.conteudo-sobre-efeito-subida-efeito-subida--atraso{
-    position:relative;
-    top: 30px;
+.conteudo-sobre.efeito-subida.efeito-subida--atraso.visivel{
+    position: relative;
+    top:230px
 }
