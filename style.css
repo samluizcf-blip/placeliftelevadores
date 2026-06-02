@@ -1182,9 +1182,16 @@ section {
 }
 .conteudo-sobre.efeito-subida.efeito-subida--atraso.visivel{
     position: relative;
-    top:230px
+    top: 0;
 }
+
+@media (min-width: 900px) {
+    .conteudo-sobre.efeito-subida.efeito-subida--atraso.visivel {
+        top: 230px;
+    }
+}
+
 #placesandre{
     color: black;
-    font-text:bold;
+    font-weight: bold;
 }
